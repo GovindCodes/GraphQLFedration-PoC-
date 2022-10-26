@@ -30,6 +30,7 @@ export class Employee {
   @Column({ nullable: true })
   city: string;
 
+  // we have the project here but we dont own project db :] HOW TO RESOLVE????????
   /*  @ManyToOne(() => Project, project => project.employees) */
   @Field(() => Project)
   project: Project;

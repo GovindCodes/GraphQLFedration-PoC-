@@ -38,6 +38,8 @@ export class EmployeeResolver {
     return this.employeeService.findOne(id);
   }
 
+  // Saying: you are looking for project we are telling this is the ID you are looking for(employee.projectId) please go and ask whoever has it
+  // later projectResolver is goin to handle this and get the data
   @ResolveField((of) => Project)
   project(@Parent() employee: Employee) {
     return { __typename: 'Project', id: employee.projectId };

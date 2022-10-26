@@ -33,6 +33,7 @@ export class ProjectResolver {
     return this.projectService.remove(id);
   }
 
+  // Telling fedration gateway how to request the project
   @ResolveReference()
   resolvereferance(ref: { __typename: string, id: string }) {
     return this.projectService.findOne(ref.id);

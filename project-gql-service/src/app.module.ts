@@ -5,6 +5,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { join } from 'path';
 
 @Module({
+  // we will update graphqlModule with GraphQLFederationModule
   imports: [ProjectModule, GraphQLFederationModule.forRoot(
     {
       autoSchemaFile: join(process.cwd(), 'src/graphql-schema.gql')
